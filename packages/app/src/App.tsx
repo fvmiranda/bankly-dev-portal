@@ -8,6 +8,7 @@ import {
   CatalogImportPage,
   catalogImportPlugin,
 } from '@backstage/plugin-catalog-import';
+import { ExplorePage } from '@backstage/plugin-explore';
 import { orgPlugin } from '@backstage/plugin-org';
 import { ScaffolderPage, scaffolderPlugin } from '@backstage/plugin-scaffolder';
 import { SearchPage } from '@backstage/plugin-search';
@@ -55,6 +56,7 @@ const app = createApp({
       />
     ),
   },
+  plugins: [],
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,
@@ -94,6 +96,7 @@ const routes = (
       </TechDocsAddons>
     </Route>
     <Route path="/create" element={<ScaffolderPage />} />
+    <Route path="/explorer" element={<ExplorePage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route
       path="/tech-radar"

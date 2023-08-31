@@ -1,28 +1,31 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: SRE
+  name: Dredd
 spec:
   type: team
   children: []
 ---
 apiVersion: backstage.io/v1alpha1
-kind: User
+kind: Group
 metadata:
-  name: Jheni
+  name: Na_Sorte
 spec:
-  memberOf: [SRE]
+  type: team
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
-kind: User
+kind: Group
 metadata:
-  name: Diego
+  name: Atlas
 spec:
-  memberOf: [SRE]
+  type: team
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
-kind: User
+kind: Group
 metadata:
-  name: Vini
+  name: SrBarriga
 spec:
-  memberOf: [SRE]
+  type: team
+  children: []

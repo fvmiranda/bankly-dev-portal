@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Card
+  description: Contexto de cartões
+spec:
+  owner: Na_Sorte
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Funding
+  description: Contexto de Financiamento
+spec:
+  owner: SrBarriga
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Autorizador
+  description: Contexto de Autorizador
+spec:
+  owner: Dredd
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: Webhook
+  description: Contexto de Webhook
+spec:
+  owner: Atlas

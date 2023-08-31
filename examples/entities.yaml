@@ -33,7 +33,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: Funding
+  owner: SrBarriga
   system: Kafka
   dependsOn:
     - Resource:kafka
@@ -46,7 +46,7 @@ spec:
   name: Jiraya
   type: service
   lifecycle: production
-  owner: Funding
+  owner: SrBarriga
   system: FundingInvoice
   dependsOn:
     - Resource:kafka
@@ -60,28 +60,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: Funding
+  owner: SrBarriga
   system: FundingInvoice
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: example-grpc-api
-spec:
-  type: grpc
-  lifecycle: experimental
-  owner: Funding
-  system: examples
-  definition: |
-    syntax = "proto3";
-
-    service Exampler {
-      rpc Example (ExampleMessage) returns (ExampleMessage) {};
-    }
-
-    message ExampleMessage {
-      string example = 1;
-    };
----
-

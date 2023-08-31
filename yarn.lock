@@ -2723,6 +2723,42 @@
   dependencies:
     "@backstage/backend-plugin-api" "^0.6.2"
 
+"@backstage/plugin-explore-common@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-explore-common/-/plugin-explore-common-0.0.1.tgz#6af10a05b1cbfeecd5383fdf8517c66b2dccfd51"
+  integrity sha512-UNSy6pFSlqTDOXrMa36LJz621+SLBCW46xOS1n2DwQtQ+IlAwKX473blW+xr85VQxeVn3s0deJV217i2zYHY0g==
+
+"@backstage/plugin-explore-react@^0.0.30":
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-explore-react/-/plugin-explore-react-0.0.30.tgz#ccef6457261f926bfd24de9611232c829038f326"
+  integrity sha512-Y5pK3a32y1LzFXs1wBorQ/ofSImI5XabXrrZEg9AWpQhZFvd36Y9eVUX/LcrB7+xxJ6v+UxcPn021czasFI0DQ==
+  dependencies:
+    "@backstage/core-plugin-api" "^1.5.3"
+    "@backstage/plugin-explore-common" "^0.0.1"
+
+"@backstage/plugin-explore@^0.4.9":
+  version "0.4.9"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-explore/-/plugin-explore-0.4.9.tgz#57e49c91226b1f12b307e92ebe60ec9bb332e4b8"
+  integrity sha512-qZLPVr6eXjzFnwCOs/55CpFQOKbgmXPWn/OTkd3Xyga3Xog968AVF6mj5LE+cmLXxghuPw3UI1stskSjhdCanQ==
+  dependencies:
+    "@backstage/catalog-model" "^1.4.1"
+    "@backstage/core-components" "^0.13.4"
+    "@backstage/core-plugin-api" "^1.5.3"
+    "@backstage/errors" "^1.2.1"
+    "@backstage/plugin-catalog-react" "^1.8.3"
+    "@backstage/plugin-explore-common" "^0.0.1"
+    "@backstage/plugin-explore-react" "^0.0.30"
+    "@backstage/plugin-search-common" "^1.2.5"
+    "@backstage/plugin-search-react" "^1.6.4"
+    "@backstage/theme" "^0.4.1"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.9.1"
+    "@material-ui/lab" "4.0.0-alpha.61"
+    "@types/react" "^16.13.1 || ^17.0.0"
+    classnames "^2.2.6"
+    pluralize "^8.0.0"
+    react-use "^17.2.4"
+
 "@backstage/plugin-github-actions@^0.6.2":
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-github-actions/-/plugin-github-actions-0.6.4.tgz#f0029b59f7ab61a386a1ae5dbb9b183f552f1c26"
@@ -7816,7 +7852,7 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.4.tgz#cd667bcfdd025213aafb7ca5915a932590acdcdc"
   integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
 
-"@types/react-dom@*", "@types/react-dom@<18.0.0", "@types/react-dom@^17":
+"@types/react-dom@*", "@types/react-dom@<18.0.0":
   version "17.0.20"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.20.tgz#e0c8901469d732b36d8473b40b679ad899da1b53"
   integrity sha512-4pzIjSxDueZZ90F52mU3aPoogkHIoSIDG+oQ+wQK7Cy2B9S+MvOqY0uEA/qawKz381qrEDkvpwyt8Bm31I8sbA==
@@ -15368,7 +15404,7 @@ kleur@^4.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
 
-knex@^2.0.0, knex@^2.3.0:
+knex@^2.0.0, knex@^2.3.0, knex@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/knex/-/knex-2.5.1.tgz#a6c6b449866cf4229f070c17411f23871ba52ef9"
   integrity sha512-z78DgGKUr4SE/6cm7ku+jHvFT0X97aERh/f0MUKAKgFnwCYBEW4TFBqtHWFYiJFid7fMrtpZ/gxJthvz5mEByA==
@@ -18151,7 +18187,7 @@ pg-types@^2.1.0:
     postgres-date "~1.0.4"
     postgres-interval "^1.1.0"
 
-pg@^8.3.0:
+pg@^8.11.3, pg@^8.3.0:
   version "8.11.3"
   resolved "https://registry.yarnpkg.com/pg/-/pg-8.11.3.tgz#d7db6e3fe268fcedd65b8e4599cda0b8b4bf76cb"
   integrity sha512-+9iuvG8QfaaUrrph+kpF24cXkH1YOOUeArRNYIxq1viYHZagBxrTno7cecY1Fa44tJeZvaoG+Djpkc3JwehN5g==
