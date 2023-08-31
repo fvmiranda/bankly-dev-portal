@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: teams
+spec:
+  type: file
+  targets:
+    - ./dba.yaml
+    - ./sre.yaml
+    - ./lead-engineers.yaml
+    - /funding.yaml

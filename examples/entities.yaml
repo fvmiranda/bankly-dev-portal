@@ -1,0 +1,87 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: FundingInvoice
+spec:
+  owner: guests
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: Kafka
+spec:
+  owner: plataform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: Kafka
+  description: Kafka
+spec:
+  type: cluster
+  owner: platform
+  system: platform
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: bankly.event.funding
+spec:
+  type: service
+  lifecycle: production
+  owner: Funding
+  system: Kafka
+  dependsOn:
+    - Resource:kafka
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Jiraya
+spec:
+  name: Jiraya
+  type: service
+  lifecycle: production
+  owner: Funding
+  system: FundingInvoice
+  dependsOn:
+    - Resource:kafka
+    - Component:bankly.event.funding
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: CreditLetter
+spec:
+  type: service
+  lifecycle: production
+  owner: Funding
+  system: FundingInvoice
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: example-grpc-api
+spec:
+  type: grpc
+  lifecycle: experimental
+  owner: Funding
+  system: examples
+  definition: |
+    syntax = "proto3";
+
+    service Exampler {
+      rpc Example (ExampleMessage) returns (ExampleMessage) {};
+    }
+
+    message ExampleMessage {
+      string example = 1;
+    };
+---
+

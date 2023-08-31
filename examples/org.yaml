@@ -1,0 +1,35 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Funding
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: RafaelPeres
+spec:
+  memberOf: [Funding]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: LeoAndrade
+spec:
+  memberOf: [Funding]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Lanzana
+spec:
+  memberOf: [Funding]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Hana
+spec:
+  memberOf: [Funding]
